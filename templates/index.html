@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AutoDoc – Vehicle Fault Diagnosis Assistant</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head><body><main>
+<header class="hero"><div class="logo">🚗</div><div><div class="brand">AutoDoc</div>
+<div class="mu" style="font-size:13px">AI vehicle diagnostics {% if not ai_enabled %}· offline rule mode{% endif %}</div></div>
+<div class="lang-wrap">
+  <label for="language" class="mu" data-i18n="language">Language</label>
+  <select id="language" aria-label="Language">
+    <option value="en">ENGLISH</option>
+    <option value="rw">KINYARWANDA</option>
+  </select>
+</div>
+</header>
+<section class="panel">
+<h1 data-i18n="question">What's wrong with your car?</h1>
+<p class="sub" data-i18n="description">Describe it the way you would to a mechanic. AutoDoc works out the likely causes, what to check, and how urgent it is.</p>
+<textarea id="desc" rows="5" data-i18n-placeholder="descriptionPlaceholder" placeholder="e.g. It struggles to start in the morning, shakes at idle, and there's black smoke when I accelerate. Fuel use has doubled this month."></textarea>
+<div class="chips" id="ex"></div>
+<details class="more" open><summary><span data-i18n="vehicleDetails">Vehicle details</span> <span class="mu" data-i18n="improvesAccuracy">· improves accuracy</span></summary>
+<div class="grid">
+<div><label data-i18n="makeModel">Make / model</label><input id="model" placeholder="Toyota Corolla"></div>
+<div><label data-i18n="year">Year</label><input id="year" type="number" placeholder="2012"></div>
+<div><label data-i18n="mileage">Mileage (km)</label><input id="km" type="number" placeholder="145000"></div>
+<div><label data-i18n="fuel">Fuel</label><select id="fuel"><option>Petrol</option><option>Diesel</option><option>Hybrid</option></select></div>
+<div><label data-i18n="transmission">Transmission</label><select id="trans"><option>Manual</option><option>Automatic</option></select></div>
+<div><label data-i18n="codesLabel">OBD-II codes (optional)</label><input id="codes" placeholder="P0300, P0171"></div>
+</div></details>
+<div class="row actions-row">
+  <button class="go" id="goBtn">✨ Diagnose my car</button>
+  <button class="alt" id="saveHistoryBtn" type="button">Save History</button>
+  <button class="alt" id="exportHistoryBtn" type="button">Export CSV</button>
+</div>
+<p class="fine" data-i18n="guidance">Guidance only. Always confirm repairs with a qualified mechanic.</p>
+</section>
+<div class="history-box">
+  <div class="mu" style="font-weight:600;" data-i18n="savedHistory">Saved history</div>
+  <div id="historyList" class="history-list"></div>
+</div>
+<div id="out"></div>
+<p class="fine" style="text-align:center;margin-top:18px">Built on SAE OBD-II fault codes and typical manufacturer service intervals.</p>
+</main>
+<script src="{{ url_for('static', filename='app.js') }}"></script>
+</body></html>

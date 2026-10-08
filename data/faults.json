@@ -1,0 +1,348 @@
+[
+  {
+    "name": "Worn spark plugs / ignition coil",
+    "severity": "Medium",
+    "codes": [
+      "P0300",
+      "P0301",
+      "P0302",
+      "P0303",
+      "P0304",
+      "P0350"
+    ],
+    "km_min": 60000,
+    "km_max": 400000,
+    "fuel": null,
+    "symptoms": {
+      "rough": 3,
+      "start": 2,
+      "fuel": 2,
+      "power": 2,
+      "stall": 1,
+      "cel": 1
+    },
+    "checks": [
+      "Inspect spark plugs for wear, oil or carbon fouling",
+      "Swap coils between cylinders to see if misfire follows",
+      "Check ignition wiring"
+    ],
+    "advice": "Replace plugs at the manufacturer interval (iridium 80–100k km, copper 30–50k km)."
+  },
+  {
+    "name": "Clogged air filter / dirty MAF sensor",
+    "severity": "Low",
+    "codes": [
+      "P0101",
+      "P0102",
+      "P0103",
+      "P0171"
+    ],
+    "km_min": 20000,
+    "km_max": 400000,
+    "fuel": null,
+    "symptoms": {
+      "fuel": 3,
+      "power": 2,
+      "black": 2,
+      "rough": 1,
+      "cel": 1
+    },
+    "checks": [
+      "Inspect and replace the air filter",
+      "Clean MAF sensor with dedicated cleaner",
+      "Look for intake hose cracks"
+    ],
+    "advice": "Replace the air filter every 15–30k km, sooner on dusty roads."
+  },
+  {
+    "name": "Fuel injector or fuel pump problem",
+    "severity": "Medium",
+    "codes": [
+      "P0087",
+      "P0190",
+      "P0200",
+      "P0201",
+      "P0172",
+      "P0299"
+    ],
+    "km_min": 80000,
+    "km_max": 400000,
+    "fuel": null,
+    "symptoms": {
+      "start": 3,
+      "black": 2,
+      "fuel": 3,
+      "power": 2,
+      "stall": 2,
+      "rough": 1,
+      "smell": 1
+    },
+    "checks": [
+      "Measure fuel pressure",
+      "Test injector spray pattern / balance",
+      "Replace fuel filter if due"
+    ],
+    "advice": "Use quality fuel; replace the fuel filter every 40–60k km."
+  },
+  {
+    "name": "Weak battery / alternator / starter",
+    "severity": "Medium",
+    "codes": [
+      "P0562",
+      "P0563"
+    ],
+    "km_min": 0,
+    "km_max": 400000,
+    "fuel": null,
+    "symptoms": {
+      "nocrank": 4,
+      "start": 3,
+      "battery": 3,
+      "stall": 1
+    },
+    "checks": [
+      "Test battery voltage (12.4–12.7 V off, 13.8–14.5 V running)",
+      "Clean battery terminals",
+      "Load-test alternator and starter"
+    ],
+    "advice": "Batteries typically last 3–5 years; test annually after year 3."
+  },
+  {
+    "name": "Turbo / EGR / DPF issue (diesel)",
+    "severity": "High",
+    "codes": [
+      "P0401",
+      "P0402",
+      "P0403",
+      "P2002",
+      "P0234",
+      "P0299"
+    ],
+    "km_min": 100000,
+    "km_max": 500000,
+    "fuel": "Diesel",
+    "symptoms": {
+      "black": 3,
+      "power": 3,
+      "cel": 2,
+      "white": 1,
+      "fuel": 1,
+      "smell": 1
+    },
+    "checks": [
+      "Inspect boost hoses and turbo for leaks",
+      "Clean or test EGR valve",
+      "Check DPF soot level / force regeneration"
+    ],
+    "advice": "Occasional long highway runs help DPF regeneration; use correct low-ash oil."
+  },
+  {
+    "name": "Burning oil – worn rings / valve seals",
+    "severity": "High",
+    "codes": [],
+    "km_min": 120000,
+    "km_max": 500000,
+    "fuel": null,
+    "symptoms": {
+      "blue": 4,
+      "oil": 3,
+      "fuel": 1,
+      "power": 1
+    },
+    "checks": [
+      "Check oil level weekly",
+      "Compression / leak-down test",
+      "Inspect PCV valve"
+    ],
+    "advice": "Use the oil grade specified; top up and monitor consumption."
+  },
+  {
+    "name": "Coolant leak / thermostat / head gasket",
+    "severity": "High",
+    "codes": [
+      "P0115",
+      "P0116",
+      "P0117",
+      "P0118",
+      "P0125",
+      "P0128"
+    ],
+    "km_min": 0,
+    "km_max": 500000,
+    "fuel": null,
+    "symptoms": {
+      "overheat": 4,
+      "white": 3,
+      "smell": 1,
+      "power": 1,
+      "cel": 1
+    },
+    "checks": [
+      "STOP driving if temperature is red",
+      "Check coolant level when cold",
+      "Pressure-test cooling system; test for exhaust gas in coolant"
+    ],
+    "advice": "Change coolant every 4–5 years; never open the radiator cap hot."
+  },
+  {
+    "name": "Worn brake pads / warped rotors",
+    "severity": "High",
+    "codes": [],
+    "km_min": 25000,
+    "km_max": 400000,
+    "fuel": null,
+    "symptoms": {
+      "brake": 4,
+      "vib": 4,
+      "pull": 1
+    },
+    "checks": [
+      "Measure pad thickness (replace under 3 mm)",
+      "Inspect rotors for grooves / runout",
+      "Check brake fluid level and colour"
+    ],
+    "advice": "Replace pads before metal contact; brake fluid every 2 years."
+  },
+  {
+    "name": "Wheel balance / alignment / suspension wear",
+    "severity": "Medium",
+    "codes": [],
+    "km_min": 10000,
+    "km_max": 400000,
+    "fuel": null,
+    "symptoms": {
+      "pull": 4,
+      "vib": 2,
+      "noise": 1
+    },
+    "checks": [
+      "Check tyre pressures and wear pattern",
+      "Wheel balance and 4-wheel alignment",
+      "Inspect tie-rod ends, ball joints, bushings"
+    ],
+    "advice": "Rotate tyres every 8–10k km; align yearly."
+  },
+  {
+    "name": "Oxygen sensor / catalytic converter fault",
+    "severity": "Medium",
+    "codes": [
+      "P0420",
+      "P0430",
+      "P0130",
+      "P0131",
+      "P0133",
+      "P0135",
+      "P0141"
+    ],
+    "km_min": 80000,
+    "km_max": 500000,
+    "fuel": null,
+    "symptoms": {
+      "fuel": 2,
+      "cel": 3,
+      "power": 2,
+      "smell": 2,
+      "rough": 1
+    },
+    "checks": [
+      "Read O2 sensor live data",
+      "Check exhaust for leaks before the cat",
+      "Inspect cat for rattle / overheating"
+    ],
+    "advice": "Fix misfires early – they destroy catalytic converters."
+  },
+  {
+    "name": "Vacuum leak / intake gasket / throttle body dirt",
+    "severity": "Low",
+    "codes": [
+      "P0171",
+      "P0174",
+      "P0505",
+      "P0507",
+      "P0506"
+    ],
+    "km_min": 40000,
+    "km_max": 500000,
+    "fuel": null,
+    "symptoms": {
+      "rough": 3,
+      "stall": 2,
+      "fuel": 1,
+      "cel": 2
+    },
+    "checks": [
+      "Listen for hissing; smoke-test intake",
+      "Clean throttle body",
+      "Inspect vacuum hoses"
+    ],
+    "advice": "Clean throttle body every 50–60k km."
+  },
+  {
+    "name": "Automatic/manual gearbox wear or low fluid",
+    "severity": "High",
+    "codes": [
+      "P0700",
+      "P0730",
+      "P0741"
+    ],
+    "km_min": 80000,
+    "km_max": 500000,
+    "fuel": null,
+    "symptoms": {
+      "gear": 4,
+      "noise": 1,
+      "power": 1,
+      "cel": 1
+    },
+    "checks": [
+      "Check transmission fluid level and colour",
+      "Scan transmission module",
+      "Inspect clutch (manual) free play"
+    ],
+    "advice": "Change transmission fluid every 60–100k km."
+  },
+  {
+    "name": "Timing belt/chain or valvetrain wear",
+    "severity": "High",
+    "codes": [
+      "P0016",
+      "P0017",
+      "P0335",
+      "P0336"
+    ],
+    "km_min": 90000,
+    "km_max": 500000,
+    "fuel": null,
+    "symptoms": {
+      "noise": 3,
+      "rough": 2,
+      "start": 2,
+      "power": 2,
+      "cel": 1
+    },
+    "checks": [
+      "Check belt replacement history",
+      "Inspect belt for cracks / chain for slack",
+      "Check cam/crank sensor correlation"
+    ],
+    "advice": "Replace timing belt at 90–100k km – failure can destroy the engine."
+  },
+  {
+    "name": "AC refrigerant leak / compressor",
+    "severity": "Low",
+    "codes": [],
+    "km_min": 0,
+    "km_max": 500000,
+    "fuel": null,
+    "symptoms": {
+      "ac": 4,
+      "smell": 1
+    },
+    "checks": [
+      "Check compressor clutch engagement",
+      "Leak test with UV dye",
+      "Replace cabin filter"
+    ],
+    "advice": "Service the AC every 2 years."
+  }
+]
